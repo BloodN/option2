@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>this</title>
+    <script type="text/javascript">
+        //I run an ice cream shop. I want to see a record of days that I have been open and I want to see how many scoops of chocolate, vanilla, and strawberry ice cream I sold, and then the total number of scoops sold.
+        function Day(days, vanilla, chocolate, strawberry) {
+            this.vFlavor = vanilla;
+            this.cFlavor = chocolate;
+            this.sFlavor = strawberry;
+            this.days = days;
+            this.calculateScoops = function () {
+                return (this.vFlavor + this.cFlavor + this.sFlavor)
+            }
+
+            this.displayDetails = function () {
+                document.write("Number of Days operating: " + this.days + "<br/>");
+                document.write("Number of Ice Cream Scoops" + "<br/><br/>");
+                document.write("Vanilla: " + this.vFlavor + "<br/>");
+                document.write("Chocolate: " + this.cFlavor + "<br/>");
+                document.write("Strawberry: " + this.sFlavor + "<br/>");
+                var total = this.calculateScoops();
+                document.write("Total Scoops: " + total + "<br/><br/>");
+            };
+        };
+        var day1 = new Day(1,415632,41586,3546);
+        var day2 = new Day(2,1536,645,354);
+        var day3 = new Day(3,547,46815,4615835);
+        var day4 = new Day(4,51463,415683,56324);
+        var day5 = new Day(5,42150,524360,532);
+        day1.displayDetails();
+        day2.displayDetails();
+        day3.displayDetails();
+        day4.displayDetails();
+        day5.displayDetails();
+    </script>
+</head>
+
+<body></body>
+
+</html>
